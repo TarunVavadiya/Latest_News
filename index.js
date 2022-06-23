@@ -13,7 +13,7 @@ xhr.onload = function () {
     if (this.status === 200) {
         let obj = JSON.parse(this.responseText);
         let articles = obj.articles;
-        // console.log(articles);
+        console.log(articles);
         let newsHtml = '';
         articles.forEach(function (element, index) {
             

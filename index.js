@@ -10,7 +10,6 @@ xhr.open('GET', `https://newsapi.org/v2/everything?q=tesla&from=2022-05-23&sortB
 xhr.getResponseHeader('Content-type', 'application/json');
 
 xhr.onload = function () {
-    if (this.status === 200) {
         let obj = JSON.parse(this.responseText);
         let articles = obj.articles;
         console.log(articles);
@@ -31,9 +30,7 @@ xhr.onload = function () {
             newsHtml += news;
             newsAccordion.innerHTML = newsHtml;
         });
-        } else {
-            console.error('some error occured!');
-        }
+  
 }
 
     xhr.send();

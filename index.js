@@ -6,13 +6,14 @@ let newsAccordion = document.getElementById('newsAccordion');
 
 // create get request 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', `https://newsapi.org/v2/everything?q=tesla&from=2022-05-23&sortBy=publishedAt&apiKey=aa6ebcacd349471d87e5d63ee44d6275`, true);
+xhr.open('GET', `https://newsapi.org/v2/everything?q=apple&from=2022-06-22&to=2022-06-22&sortBy=popularity&apiKey=aa6ebcacd349471d87e5d63ee44d6275`, true);
 xhr.getResponseHeader('Content-type', 'application/json');
 
 xhr.onload = function () {
         let obj = JSON.parse(this.responseText);
         let articles = obj.articles;
         console.log(articles);
+        
         let newsHtml = '';
         articles.forEach(function (element, index) {
             
@@ -30,6 +31,7 @@ xhr.onload = function () {
             newsHtml += news;
             newsAccordion.innerHTML = newsHtml;
         });
+        console.log(this.response);
   
 }
 

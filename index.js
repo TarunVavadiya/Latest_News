@@ -1,12 +1,12 @@
 // aa6ebcacd349471d87e5d63ee44d6275
 
-let apiKey = 'aa6ebcacd349471d87e5d63ee44d6275';
+// let apiKey = 'aa6ebcacd349471d87e5d63ee44d6275';
 
 let newsAccordion = document.getElementById('newsAccordion');
 
 // create get request 
 const xhr = new XMLHttpRequest();
-xhr.open('GET', `https://newsapi.org/v2/everything?q=tesla&from=2022-05-22&sortBy=publishedAt&apiKey=${apiKey}`, true);
+xhr.open('GET', `https://newsapi.org/v2/everything?q=tesla&from=2022-05-23&sortBy=publishedAt&apiKey=aa6ebcacd349471d87e5d63ee44d6275`, true);
 xhr.getResponseHeader('Content-type', 'application/json');
 
 xhr.onload = function () {
